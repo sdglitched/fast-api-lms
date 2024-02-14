@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from api import users, sections, cources
+from api import courses, users, sections
 from db.db_setup import engine
 from db.models import user, course
 
@@ -14,5 +14,5 @@ app = FastAPI(
     )
 
 app.include_router(users.router)
-app.include_router(cources.router)
+app.include_router(courses.router)
 app.include_router(sections.router)
