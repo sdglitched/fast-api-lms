@@ -8,8 +8,8 @@ from .mixins import Timestamp
 
 
 class Role(enum.IntEnum):
-    teacher=1
-    student=2
+    teacher = 1
+    student = 2
 
 
 class User(Timestamp, Base):
