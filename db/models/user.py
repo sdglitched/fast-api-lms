@@ -7,7 +7,7 @@ from ..db_setup import Base
 from .mixins import Timestamp
 
 
-class Role(enum.Enum):
+class Role(enum.IntEnum):
     teacher=1
     student=2
 
@@ -21,9 +21,11 @@ class User(Timestamp, Base):
     is_active = Column(Boolean, default=False)
 
     profile = relationship("Profile", back_populates="owner", uselist=False)
+    student_courses = relationship("StudentCourse", back_populates="student")
+    student_content_blocks = relationship("CompletedContentBlock", back_populates="student")
 
 
-class Profie(Timestamp, Base):
+class Profile(Timestamp, Base):
     __tablename__ = "profiles"
 
     id = Column(Integer, primary_key=True, index=True)
