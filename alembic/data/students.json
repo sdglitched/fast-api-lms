@@ -1,0 +1,30 @@
+[
+    {
+        "email": "akash@example.com",
+        "role": 2,
+        "password": "testing123",
+        "created_at": "2024-01-08 00:00:00-00",
+        "updated_at": "2024-01-08 00:00:00-00"
+    },
+    {
+        "email": "krishna@example.com",
+        "role": 2,
+        "password": "testing123",
+        "created_at": "2024-01-08 00:00:00-00",
+        "updated_at": "2024-01-08 00:00:00-00"
+    },
+    {
+        "email": "aman@example.com",
+        "role": 2,
+        "password": "testing123",
+        "created_at": "2024-01-08 00:00:00-00",
+        "updated_at": "2024-01-08 00:00:00-00"
+    },
+    {
+        "email": "avadhoot@example.com",
+        "role": 2,
+        "password": "testing123",
+        "created_at": "2024-01-08 00:00:00-00",
+        "updated_at": "2024-01-08 00:00:00-00"
+    }
+]
