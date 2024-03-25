@@ -1,6 +1,11 @@
-from fastapi import FastAPI, Path
-from pydantic import BaseModel
-from typing import Optional, List
+from fastapi import FastAPI
+
+from api import users, sections, cources
+from db.db_setup import engine
+from db.models import user, course
+
+user.Base.metadata.create_all(bind=engine)
+course.Base.metadata.create_all(bind=engine)
 
 from api import users, sections, cources
 
@@ -11,5 +16,5 @@ app = FastAPI(
     )
 
 app.include_router(users.router)
-app.include_router(sections.router)
 app.include_router(cources.router)
+app.include_router(sections.router)
