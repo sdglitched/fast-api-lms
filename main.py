@@ -7,6 +7,8 @@ from db.models import user, course
 user.Base.metadata.create_all(bind=engine)
 course.Base.metadata.create_all(bind=engine)
 
+from api import users, sections, cources
+
 app = FastAPI(
         title="Fast API LMS",
         description="LMS for managing students and courses.",
